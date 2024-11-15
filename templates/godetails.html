@@ -1,0 +1,27 @@
+b{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+<h2>view details</h2>
+
+<div class="card mx-auto mb-3 bg-info " style="max-width: 600px;">
+  <div class="row g-0">
+    <div class="col-md-4 me-5">
+      <img src="{{employee.image.url}}" class="img-fluid rounded-start p-3" height="300px" width="100%" alt="...">
+    </div>
+    <div class="col-md-7 mt-5">
+      <div class="card-body">
+        <h5 class="card-title m-2">Name:{{employee.name}}</h5>
+        <h5 class="card-text m-2">IdNumber:{{employee.idnumber}}</h5>
+          <h6 class="card-text m-2">Designation:{{employee.designation}}</h6>
+        <h5 class="card-text m-2">Experience:{{employee.experience}}</h5><br>
+        <a href="{% url 'app1:delete' movie.id %}" class="btn btn-danger">Delete</a>
+        <a href="{% url 'app1:edit' movie.id %}" class="btn btn-danger">Edit</a>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+
+{% endblock %}

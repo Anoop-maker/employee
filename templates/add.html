@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<h2>Fill the blanks</h2>
+<form method="POST" enctype="multipart/form-data">
+
+{% csrf_token %}
+    <div class="mb-3">
+  <label class="form-label">Name</label>
+  <input type="text" class="form-control" name="n" placeholder="Enter The Name">
+</div>
+
+    <div class="mb-3">
+  <label class="form-label">Idnumber</label>
+  <input type="number" class="form-control" name="nu" placeholder="Enter The Id">
+</div>
+
+    <div class="mb-3">
+  <label class="form-label">Designation</label>
+  <input type="text" class="form-control" name="d" placeholder="Enter The Designation">
+</div>
+
+    <div class="mb-3">
+  <label class="form-label">Experience</label>
+  <input type="number" class="form-control" name="e" placeholder="Enter The Experience">
+</div>
+
+    <div class="mb-3">
+  <label class="form-label">Image</label>
+  <input type="file" class="form-control" name="i">
+</div>
+
+    <div class="mb-3">
+
+  <input type="submit" value="ADD">
+</div>
+</form>
+{% endblock %}
